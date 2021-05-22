@@ -1,0 +1,33 @@
+{
+  "name": "jastime",
+  "version": "1.0.0",
+  "description": "our newsfeed and announcement website for ANY events",
+  "main": "index.js",
+  "scripts": {
+    "strt": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamirali/jastime.git"
+  },
+  "keywords": [
+    "newsfeed",
+    "css",
+    "expressjs",
+    "mongodb"
+  ],
+  "author": "jastime",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yamirali/jastime/issues"
+  },
+  "homepage": "https://github.com/yamirali/jastime#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
