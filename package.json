@@ -1,33 +1,32 @@
 {
-  "name": "jastime",
+  "name": "fls-gulp",
   "version": "1.0.0",
-  "description": "our newsfeed and announcement website for ANY events",
-  "main": "index.js",
+  "description": "gulp build",
+  "main": "index.html",
   "scripts": {
-    "strt": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yamirali/jastime.git"
-  },
-  "keywords": [
-    "newsfeed",
-    "css",
-    "expressjs",
-    "mongodb"
-  ],
-  "author": "jastime",
+  "author": "yami",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yamirali/jastime/issues"
-  },
-  "homepage": "https://github.com/yamirali/jastime#readme",
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "mongoose": "^5.12.10"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "file-include": "^0.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp-webp-html": "^1.0.2"
   }
 }
