@@ -4,31 +4,31 @@
     box-sizing: border-box;
 }
 /* Font-weight */
-.bold {
+._bold {
     font-weight: 700;
 }
-.semi-bold {
+._semi-bold {
     font-weight: 600;
 }
-.medium {
+._medium {
     font-weight: 500;
 }
 
 
 /* Font-size */
-.font-48px {
+._font48px {
     font-size: 48px;
 }
 
-.text-color-black {
+._text-color-black {
     color: black;
 }
 
-.text-color-white {
+._text-color-white {
     color: white;
 }
 
-.text-float-right {
+._text-float-right {
     float: right;
     text-align: right;
 }
