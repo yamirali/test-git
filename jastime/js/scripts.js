@@ -49,6 +49,7 @@ const menuIcons = [
     }
 ]
 
+
 document.getElementById("re").addEventListener("click", () => {
     window.open("../../newsItemPage.html","_self")
 })
@@ -66,10 +67,35 @@ for(var menuItem = 0; menuItem < menuIcons.length; menuItem++) {
     elem.style.backgroundImage = `url(${menuIcons[menuItem].idle})`
     if(document.getElementById(menuIcons[menuItem].parentId).classList.contains("menu__item_active")) {
         elem.style.backgroundImage = `url(${menuIcons[menuItem].active})`
-
-        // document.getElementById(menuIcons[menuItem].parentId).addEventListener("mouseenter",()=>{
-        //     elem.style.backgroundImage = `url(${menuIcons[menuItem].idle})`
-        // })
     }
-    
+}
+
+var isToggle = true;
+function toggle() {
+    var myVarVal = getComputedStyle(document.documentElement).getPropertyValue('--menu-width');
+    if(isToggle) {
+        console.log(myVarVal)
+        let width = "0px"
+        if(width === "0px") {
+            console.log("aa")
+            document.getElementById("header").style.width = `calc(100% - ${width} - 1%)`;
+            document.getElementById("content").style.marginLeft = `calc(${width} + 0.5%)`;
+        } else {
+            document.getElementById("header").style.width = `calc(100% - ${width} - 1.5%)`;
+            document.getElementById("content").style.marginLeft = `calc(${width} + 1%)`;
+        }
+        document.getElementById("menu").style.width = width;
+        document.getElementById("logo").style.display = "none";
+        document.getElementById("nav").style.display = "none";
+        
+        isToggle = false;
+    } else {
+        console.log(myVarVal)
+        document.getElementById("menu").style.width = `${myVarVal}`;
+        document.getElementById("logo").style.display = "flex";
+        document.getElementById("nav").style.display = "block";
+        document.getElementById("header").style.width = `calc(100% - ${myVarVal} - 1.5%)`;
+        document.getElementById("content").style.marginLeft = `calc(${myVarVal} + 1%)`;
+        isToggle = true;
+    }
 }

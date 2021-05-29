@@ -10,21 +10,27 @@
 </head>
 <body>
     <div class="janitor"></div>
-    <div class="menu">
-        <div class="menu__logo"> <a href="./index.html">Jastime.</a> </div>
-        <nav class="menu__nav">
+    <div class="menu" id="menu">
+        
+        
+        <div class="menu__logo" id="logo"> <a href="./index.html">Jastime.</a> </div>
+        <nav class="menu__nav" id="nav">
             <ul>
-                <a href="./index.html" id="menu__anchor-news" class="menu__item_active">    <div class="menu__icon" id="menu__icon-news"></div>       <li>Новости</li></a>
-                <a href="./events.html" id="menu__anchor-events">                           <div class="menu__icon" id="menu__icon-events"></div>     <li>Ивенты</li></a>
-                <a href="#" id="menu__anchor-compet">                                       <div class="menu__icon" id="menu__icon-compet"></div>     <li>Соревнования</li></a>
-                <a href="#" id="menu__anchor-dvizh">                                        <div class="menu__icon" id="menu__icon-dvizh"></div>      <li>Движ</li></a>
-                <a href="#" id="menu__anchor-courses">                                      <div class="menu__icon" id="menu__icon-courses"></div>    <li>Курсы</li></a>
+                <a href="./index.html" id="menu__anchor-news" class="menu__item_active">    <div class="menu__icon" id="menu__icon-news"></div>       <li class="hey">Новости</li></a>
+                <a href="./events.html" id="menu__anchor-events">                           <div class="menu__icon" id="menu__icon-events"></div>     <li class="hey">Ивенты</li></a>
+                <a href="#" id="menu__anchor-compet">                                       <div class="menu__icon" id="menu__icon-compet"></div>     <li class="hey">Соревнования</li></a>
+                <a href="#" id="menu__anchor-dvizh">                                        <div class="menu__icon" id="menu__icon-dvizh"></div>      <li class="hey">Движ</li></a>
+                <a href="#" id="menu__anchor-courses">                                      <div class="menu__icon" id="menu__icon-courses"></div>    <li class="hey">Курсы</li></a>
             </ul>
         </nav>
     </div>
 
-    <div class="header">
-        <div style="width: 10px; height: 10px;"></div>
+    <div class="header" id="header">
+        <div class="hamburger" onclick="toggle();">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         <div class="header__john">
             <div class="header__add"><a href="#">Добавить</a></div>
             <div class="header__account" id="header-account" onclick="myFunction();">
@@ -60,9 +66,9 @@
         </div>
     </div>
     
-    <div class="content">
+    <div class="content" id="content">
         <div class="content__head">
-            <h1 class="content__title">News</h1>
+            <h1 class="content__title" >News</h1>
             <div class="content__search">
                 <input type="text" placeholder="Search News">
                 <button><a href="#"></a></button>
@@ -71,8 +77,8 @@
         
         <div class="content__timeline">
             <div class="content__timelineoption content__timelineoption_active">All</div>
-            <div class="content__timelineoption">Latest</div>
-            <div class="content__timelineoption">Trending</div>
+            <div class="content__timelineoption" onclick="openNav();">Latest</div>
+            <div class="content__timelineoption" onclick="closeNav();">Trending</div>
             <div class="content__timelineoption">Popular</div>
         </div>
 
