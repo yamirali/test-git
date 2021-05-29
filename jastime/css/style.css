@@ -107,7 +107,7 @@
   --header-width: calc(100% - var(--menu-width) - 1.5%);
   --header-height: 80px;
   --bg-color: #eef7fd;
-  --toggle-anim-duration: 750ms;
+  --toggle-anim: all 750ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
 }
 
 * {
@@ -147,9 +147,9 @@ body {
   z-index: 9999;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px;
-  -webkit-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  -o-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -webkit-transition: var(--toggle-anim);
+  -o-transition: var(--toggle-anim);
+  transition: var(--toggle-anim);
 }
 
 .menu__logo {
@@ -188,9 +188,9 @@ body {
   color: black;
   font-size: 1.5rem;
   font-weight: 700;
-  -webkit-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  -o-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -webkit-transition: var(--toggle-anim);
+  -o-transition: var(--toggle-anim);
+  transition: var(--toggle-anim);
   margin: 15px 15px;
   padding: 7.5px 15px;
 }
@@ -227,9 +227,9 @@ body {
   background-size: cover;
   width: 32px;
   height: 32px;
-  -webkit-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  -o-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -webkit-transition: var(--toggle-anim);
+  -o-transition: var(--toggle-anim);
+  transition: var(--toggle-anim);
 }
 
 .header__john,
@@ -267,9 +267,9 @@ body {
   z-index: 9999;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px;
-  -webkit-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  -o-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -webkit-transition: var(--toggle-anim);
+  -o-transition: var(--toggle-anim);
+  transition: var(--toggle-anim);
 }
 
 .header .hamburger {
@@ -473,9 +473,9 @@ body {
   margin-left: calc(var(--menu-width) + 1%);
   margin-right: 0.5%;
   padding: 64px 48px;
-  -webkit-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  -o-transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  transition: all var(--toggle-anim-duration) cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -webkit-transition: var(--toggle-anim);
+  -o-transition: var(--toggle-anim);
+  transition: var(--toggle-anim);
 }
 
 .content__head {
