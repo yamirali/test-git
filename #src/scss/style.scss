@@ -435,12 +435,6 @@ body { background-color: var(--bg-color); }
 }
 
 @media (max-width: 394px) {
-    .header__john {
-        margin-right: 16px;
-    }
-    .header__add {
-        display: none;
-    }
     .content__timeline {
         display: none;
     }
@@ -450,6 +444,10 @@ body { background-color: var(--bg-color); }
 }
 
 @media (max-width: 425px) {
+    .header {
+        &__john { margin-right: 16px; }
+        &__add { display: none; }
+    }
     .content {
         margin-left: auto;
         padding: 6.9% 5%;
@@ -475,6 +473,7 @@ body { background-color: var(--bg-color); }
 }
 
 @media (max-width: 768px) {
+    
     .menu {
         display: none;
     }
@@ -483,7 +482,6 @@ body { background-color: var(--bg-color); }
         left: 1%;
         right: 1%;
         padding: 0;
-        justify-content: flex-end;
     }
     .content__search {
         display: none;

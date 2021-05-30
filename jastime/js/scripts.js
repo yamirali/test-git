@@ -53,14 +53,24 @@ const menuIcons = [
 document.getElementById("re").addEventListener("click", () => {
     window.open("../../newsItemPage.html","_self")
 })
-var x = document.getElementById('dropdown-content');
-function myFunction() {
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
+
+
+const header__dropdown = document.getElementById('header__dropdown')
+header__dropdown.style.display = "none"
+
+document.addEventListener("click", (evt) => {
+    const header__profile = document.getElementById("header__account")
+    let targetElement = evt.target    
+
+    do {
+        if (targetElement == header__profile && header__dropdown.style.display == "none") {
+            header__dropdown.style.display = "block"
+            return
+        }
+        targetElement = targetElement.parentNode
+    } while(targetElement);
+    header__dropdown.style.display = "none"
+})
 
 for(var menuItem = 0; menuItem < menuIcons.length; menuItem++) {
     var elem = document.getElementById(menuIcons[menuItem].id)

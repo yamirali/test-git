@@ -836,9 +836,6 @@ body {
     left: 1%;
     right: 1%;
     padding: 0;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
 
   .content__search {
@@ -875,6 +872,14 @@ body {
 }
 
 @media (max-width: 425px) {
+  .header__john {
+    margin-right: 16px;
+  }
+
+  .header__add {
+    display: none;
+  }
+
   .content {
     margin-left: auto;
     padding: 6.9% 5%;
@@ -887,14 +892,6 @@ body {
 }
 
 @media (max-width: 394px) {
-  .header__john {
-    margin-right: 16px;
-  }
-
-  .header__add {
-    display: none;
-  }
-
   .content__timeline {
     display: none;
   }
