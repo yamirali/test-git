@@ -198,13 +198,13 @@ body {
 .menu__nav a:hover {
   background-color: #afadb62a;
   color: black !important;
-  border-radius: 0px;
+  border-radius: 10px;
   position: relative;
 }
 
 .menu__nav li {
   text-align: left;
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 
 .menu__nav a:hover > #menu__icon-news {
@@ -218,7 +218,7 @@ body {
 .menu__item_active {
   background-color: black;
   color: white !important;
-  border-radius: 10px;
+  border-radius: 2px;
   position: relative;
 }
 
@@ -247,6 +247,19 @@ body {
           justify-content: space-between;
 }
 
+.header__menu-control,
+.header__add,
+.header__account,
+.content__timelineoption,
+.content__readmore {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
 .header {
   background-color: white;
   float: right;
@@ -272,19 +285,33 @@ body {
   transition: var(--toggle-anim);
 }
 
-.header .hamburger {
-  margin-left: 20px;
-  width: 20px;
-  height: 20px;
-  position: relative;
+.header__menu-control {
+  margin-left: 6px;
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
-.header .hamburger:hover > .line {
+.header__menu-control:hover > .header__hamburger > .header__line {
   background-color: gray;
 }
 
-.header .hamburger .line {
+.header__hamburger {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.header__line {
   width: 100%;
   height: 4px;
   background-color: #000;
@@ -294,12 +321,12 @@ body {
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
 }
 
-.header .hamburger .line:nth-child(2) {
+.header__line:nth-child(2) {
   top: 50%;
   margin-top: -2px;
 }
 
-.header .hamburger .line:nth-child(3) {
+.header__line:nth-child(3) {
   bottom: 0;
 }
 
@@ -358,13 +385,6 @@ body {
           transform: translateY(-2px);
 }
 
-.header__account {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
 .header__name {
   font-size: 24px;
   line-height: 30px;
@@ -411,7 +431,6 @@ body {
 
 .header__dropdown {
   top: 46px;
-  display: none;
   position: absolute;
   background: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
@@ -420,6 +439,28 @@ body {
   list-style: none;
   right: 30px;
   width: 300px;
+  -webkit-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -o-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.header #hello {
+  height: 0px;
+  display: none;
+}
+
+.header #header__menu {
+  width: 192.11px;
+  top: 56px;
+  left: -20px;
+  border-radius: 2px;
+  -webkit-transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -o-transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.header #header__nav {
+  margin-top: 0;
 }
 
 .header__item {
@@ -608,21 +649,28 @@ body {
   content: '';
   height: 3px;
   bottom: -3px;
-  left: 0;
+  left: 1%;
   right: 0;
-  width: 0;
+  width: 0%;
   -webkit-transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   -o-transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   background: black;
-  border-radius: 3px;
 }
 
 .content__timelineoption:not(.content__timelineoption_active):hover:after {
-  width: 100%;
+  width: 99%;
   -webkit-transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   -o-transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.content #content__trending::after {
+  left: .5%;
+}
+
+.content #content__trending:hover:after {
+  width: 99.5%;
 }
 
 .content__timelineoption_active {
@@ -641,7 +689,6 @@ body {
   right: 0;
   width: 100%;
   background: black;
-  border-radius: 3px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -782,20 +829,16 @@ body {
     font-size: 30px;
   }
 
-  nav {
-    margin-top: 17vh;
-  }
-
   .menu__icon {
     display: none;
   }
 
-  nav li {
+  .menu__nav li {
     font-size: 18px;
     padding: 5px 10px;
   }
 
-  nav a {
+  .menu__nav a {
     margin: 15px 15px;
     padding: 5px;
   }
@@ -809,7 +852,7 @@ body {
   }
 
   .menu {
-    width: 192.11px;
+    width: var(--menu-width);
   }
 
   .menu__logo {
@@ -817,7 +860,7 @@ body {
   }
 
   :root {
-    --menu-width: 192.11px;
+    --menu-width: 211px;
     --header-width: calc(100% - var(--menu-width) - 1.5%);
   }
 

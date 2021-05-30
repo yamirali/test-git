@@ -26,11 +26,30 @@
     </div>
 
     <div class="header" id="header">
-        <div class="hamburger" onclick="toggle();">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="header__menu-control" onclick="toggle();" id="header__humburger">
+            <div class="header__hamburger"  >
+                <div class="header__line"></div>
+                <div class="header__line"></div>
+                <div class="header__line"></div>
+                <div class="header__options">
+                    <div class="header__dropdown" id="header__menu">
+                        <div id="hello">
+                            <nav class="menu__nav" id="header__nav">
+                                <ul>
+                                    <a href="./index.html" id="menu__anchor-news" class="menu__item_active">    <div class="menu__icon" id="menu__icon-news"></div>       <li class="hey">Новости</li></a>
+                                    <a href="./events.html" id="menu__anchor-events">                           <div class="menu__icon" id="menu__icon-events"></div>     <li class="hey">Ивенты</li></a>
+                                    <a href="#" id="menu__anchor-compet">                                       <div class="menu__icon" id="menu__icon-compet"></div>     <li class="hey">Соревнования</li></a>
+                                    <a href="#" id="menu__anchor-dvizh">                                        <div class="menu__icon" id="menu__icon-dvizh"></div>      <li class="hey">Движ</li></a>
+                                    <a href="#" id="menu__anchor-courses">                                      <div class="menu__icon" id="menu__icon-courses"></div>    <li class="hey">Курсы</li></a>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
+        
         <div class="header__john">
             <div class="header__add"><a href="#">Добавить</a></div>
             <div class="header__account" id="header__account">
@@ -77,8 +96,8 @@
         
         <div class="content__timeline">
             <div class="content__timelineoption content__timelineoption_active">All</div>
-            <div class="content__timelineoption" onclick="openNav();">Latest</div>
-            <div class="content__timelineoption" onclick="closeNav();">Trending</div>
+            <div class="content__timelineoption">Latest</div>
+            <div class="content__timelineoption" id="content__trending">Trending</div>
             <div class="content__timelineoption">Popular</div>
         </div>
 
