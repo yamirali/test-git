@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Jastime</title>
+    <script src="./js/scripts.js" defer></script>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div class="janitor"></div>
+    <div class="menu" id="menu">
+        
+        
+        <div class="menu__logo" id="logo"> <a href="./index.html">Jastime.</a> </div>
+        <nav class="menu__nav" id="nav">
+            <ul>
+                <a href="./index.html" id="menu__anchor-news" class="menu__item_active">    <div class="menu__icon" id="menu__icon-news"></div>       <li class="hey">Новости</li></a>
+                <a href="./events.html" id="menu__anchor-events">                           <div class="menu__icon" id="menu__icon-events"></div>     <li class="hey">Ивенты</li></a>
+                <a href="#" id="menu__anchor-compet">                                       <div class="menu__icon" id="menu__icon-compet"></div>     <li class="hey">Соревнования</li></a>
+                <a href="#" id="menu__anchor-dvizh">                                        <div class="menu__icon" id="menu__icon-dvizh"></div>      <li class="hey">Движ</li></a>
+                <a href="#" id="menu__anchor-courses">                                      <div class="menu__icon" id="menu__icon-courses"></div>    <li class="hey">Курсы</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header" id="header">
+        <div class="header__menu-control" onclick="toggle();" id="header__humburger">
+            <div class="header__hamburger"  >
+                <div class="header__line"></div>
+                <div class="header__line"></div>
+                <div class="header__line"></div>
+                <div class="header__options">
+                    <div class="header__dropdown" id="header__menu">
+                        <div id="hello">
+                            <nav class="menu__nav" id="header__nav">
+                                <ul>
+                                    <a href="./index.html" id="menu__anchor-news" class="menu__item_active">    <div class="menu__icon" id="menu__icon-news"></div>       <li class="hey">Новости</li></a>
+                                    <a href="./events.html" id="menu__anchor-events">                           <div class="menu__icon" id="menu__icon-events"></div>     <li class="hey">Ивенты</li></a>
+                                    <a href="#" id="menu__anchor-compet">                                       <div class="menu__icon" id="menu__icon-compet"></div>     <li class="hey">Соревнования</li></a>
+                                    <a href="#" id="menu__anchor-dvizh">                                        <div class="menu__icon" id="menu__icon-dvizh"></div>      <li class="hey">Движ</li></a>
+                                    <a href="#" id="menu__anchor-courses">                                      <div class="menu__icon" id="menu__icon-courses"></div>    <li class="hey">Курсы</li></a>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header__john">
+            <div class="header__add"><a href="#">Добавить</a></div>
+            <div class="header__account" id="header__account">
+                <div class="header__profile">
+                    <div class="header__name">Amirali</div> 
+                    <div class="header__logo"><div class="header__logo_online"></div></div>
+                </div>
+                <div class="header__options" id="header__options">
+                    <div class="header__dropdown" id="header__dropdown">
+                        <a href="#" class="header__item" id="header__profile">
+                            <div class="header__item-item">
+                                <div class="header__logo" style="width: 44px; height: 44px;"></div>
+                                <div class="header__label">View your profile</div>
+                            </div>
+                        </a>
+                        <div class="header__rest-items">
+                            <a href="#" class="header__item">
+                                <div class="header__rest-item">
+                                    <div class="header__icon"></div>
+                                    <div class="header__label">Support</div>
+                                </div>
+                            </a>
+                            <a href="#" class="header__item">
+                                <div class="header__rest-item">
+                                    <div class="header__icon"></div>
+                                    <div class="header__label">Disconnect</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>                            
+        </div>
+    </div>
+    
+    <div class="content" id="content">
+        <div class="content__head">
+            <h1 class="content__title" >News</h1>
+            <div class="content__search">
+                <input type="text" placeholder="Search News">
+                <button><a href="#"></a></button>
+            </div>
+        </div>
+        
+        <div class="content__timeline">
+            <div class="content__timelineoption content__timelineoption_active">All</div>
+            <div class="content__timelineoption">Latest</div>
+            <div class="content__timelineoption" id="content__trending">Trending</div>
+            <div class="content__timelineoption">Popular</div>
+        </div>
+
+        <div class="content__body">
+            <div class="content__main">
+                <div class="content__block" id="news1">
+                    <h1 class="content__topic">The Great <br> British <br> Retail <br> Restructuring</h1>
+                    <div class="content__readmore" id="re">Read more</div>
+                </div>
+                <div class="content__block" id="news2">
+                    <h1 class="content__topic">Reality has<br>a starring<br>role at<br>Milan</h1>
+                    <div class="content__readmore">Read more</div>
+                </div>
+                <div class="content__block" id="news3">
+                    <h1 class="content__topic text-float-right">The Great <br> British <br> Retail <br> Restructuring</h1>
+                    <div class="content__readmore">Read more</div>
+                </div>
+                <div class="content__block" id="news4">
+                    <h1 class="content__topic">The Great <br> British <br> Retail <br> Restructuring</h1>
+                    <div class="content__readmore">Read more</div>
+                </div>
+                <div class="content__block" id="news5">
+                    <h1 class="content__topic">Most in demand<br><span class="_font48px _bold">fashion trend</span></h1>
+                    <div class="content__readmore">Read more</div>
+                </div>
+                <div class="content__block"  id="news6">
+                    <h1 class="content__topic">The Great <br> British <br> Retail <br> Restructuring</h1>
+                    <div class="content__readmore">Read more</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header" style="position: static; margin-top: 200px; margin-bottom: 1%; margin-right: 1%;"></div>
+
+</body>
+</html>
